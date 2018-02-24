@@ -23,11 +23,37 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+1. Convert to grayscale
+```python
+gray = grayscale(image)
+```
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+2. Run Gaussian blur
+```python
+blur_gray = gaussian_blur(gray, kernel_size)
+```
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+3. Run Canny detection with threshold [50, 150]
+```python
+edges = canny(blur_gray, low_threshold, high_threshold)
+```
+
+4. Create the mask
+```python
+imshape = image.shape
+vertices = np.array([[(0, imshape[0]), (450, 320), (490, 320), (imshape[1], imshape[0])]], dtype=np.int32)
+masked_edges = region_of_interest(edges, vertices)
+```
+
+5. Run Hough on edge detected image
+```python
+line_image = hough_lines(masked_edges, rho, theta, threshold, min_line_length, max_line_gap)
+```
+
+6. Overlay the image with lines over the original image
+```python
+lines_edges = weighted_img(line_image, image, α=0.8, β=1., λ=0.)
+```
 
 ![alt text][image1]
 
