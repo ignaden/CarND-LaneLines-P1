@@ -4,22 +4,22 @@ Project writeup for Finding Lanes
 ### 1. Describe the pipeline
 
 #### 1. Convert to grayscale
-[First image](writeup_images/step_1.jpg?raw=true "Convert to grayscale")
+[First image](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_1.jpg?raw=true "Convert to grayscale")
 
 #### 2. Run Gaussian blur
-[After adding Gaussian blur](writeup_images/step_2.jpg?raw=true "Run Gaussian blur")
+[After adding Gaussian blur](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_2.jpg?raw=true "Run Gaussian blur")
 
 #### 3. Run Canny detection with threshold [50, 150]
-[Canny detection](writeup_images/step_3.jpg?raw=true "Canny detection")
+[Canny detection](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_3.jpg?raw=true "Canny detection")
 
 #### 4. Create the mask
-[Mask](writeup_images/step_4.jpg?raw=true "Mask")
+[Mask](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_4.jpg?raw=true "Mask")
 
 #### 5. Run Hough on edge detected image
-[Run Hough on edge detected image](writeup_images/step_5.jpg?raw=true "Run Hough on edge detected image")
+[Run Hough on edge detected image](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_5.jpg?raw=true "Run Hough on edge detected image")
 
 #### 6. Overlay the image with lines over the original image
-[Original image overlaid with lines](writeup_images/step_6.jpg?raw=true "Original image overlaid with lines")
+[Original image overlaid with lines](https://github.com/ignaden/CarND-LaneLines-P1/writeup_images/step_6.jpg?raw=true "Original image overlaid with lines")
 
 The complete code is
 
@@ -70,10 +70,10 @@ def process_image(image):
 
 Here're the resulting videos.
 ##### White lines
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/4ANCYahKC5c/0.jpg)](https://www.youtube.com/watch?v=Q4ANCYahKC5c)
+[![Whilte lines](https://img.youtube.com/vi/4ANCYahKC5c/0.jpg)](https://www.youtube.com/watch?v=Q4ANCYahKC5c)
 
 ##### Yellow lines
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Q9WYJ_0Ic28/0.jpg)](https://www.youtube.com/watch?v=Q9WYJ_0Ic28)
+[![Yellow line](https://img.youtube.com/vi/Q9WYJ_0Ic28/0.jpg)](https://www.youtube.com/watch?v=Q9WYJ_0Ic28)
 
 ### 2. Identify any shortcomings
 
