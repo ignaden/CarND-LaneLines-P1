@@ -4,22 +4,22 @@ Project writeup for Finding Lanes
 ### 1. Describe the pipeline
 
 #### 1. Convert to grayscale
-[First image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_1.jpg "Convert to grayscale")
+![First image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_1.jpg "Convert to grayscale")
 
 #### 2. Run Gaussian blur
-[After adding Gaussian blur](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_2.jpg "Run Gaussian blur")
+![After adding Gaussian blur](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_2.jpg "Run Gaussian blur")
 
 #### 3. Run Canny detection with threshold [50, 150]
-[Canny detection](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_3.jpg "Canny detection")
+![Canny detection](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_3.jpg "Canny detection")
 
 #### 4. Create the mask
-[Mask](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_4.jpg "Mask")
+![Mask](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_4.jpg "Mask")
 
 #### 5. Run Hough on edge detected image
-[Run Hough on edge detected image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_5.jpg "Run Hough on edge detected image")
+![Run Hough on edge detected image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_5.jpg "Run Hough on edge detected image")
 
 #### 6. Overlay the image with lines over the original image
-[Original image overlaid with lines](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_6.jpg "Original image overlaid with lines")
+![Original image overlaid with lines](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_6.jpg "Original image overlaid with lines")
 
 The complete code is
 
