@@ -1,27 +1,32 @@
-Project writeup for Finding Lanes
-
+# Project writeup for Finding Lanes
 
 ### 1. Describe the pipeline
 
 #### 1. Convert to grayscale
+Convert the RGB image to grayscale.
 ![First image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_1.jpg "Convert to grayscale")
 
 #### 2. Run Gaussian blur
+Smooth out the image for better performance.
 ![After adding Gaussian blur](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_2.jpg "Run Gaussian blur")
 
 #### 3. Run Canny detection with threshold [50, 150]
+Run the Canny detection on the image.
 ![Canny detection](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_3.jpg "Canny detection")
 
 #### 4. Create the mask
+Leave out only the part of the image that can contain the road.
 ![Mask](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_4.jpg "Mask")
 
 #### 5. Run Hough on edge detected image
+Run the Hough detection on the resulting image and obtain the two lines - left and right.
 ![Run Hough on edge detected image](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_5.jpg "Run Hough on edge detected image")
 
 #### 6. Overlay the image with lines over the original image
+Overlay the resulting lines from step 5 onto the original image.
 ![Original image overlaid with lines](https://github.com/ignaden/CarND-LaneLines-P1/raw/master/writeup_images/step_6.jpg "Original image overlaid with lines")
 
-The complete code is
+The code for this pipeline is listed below:
 
 ```python
 def process_image(image):
@@ -68,11 +73,11 @@ def process_image(image):
 
 #### Test videos
 
-Here're the resulting videos.
+Here're the resulting videos (actual videos are in the repo, the links below will take you to YouTube videos).
 ##### White lines
 [![Whilte lines](https://img.youtube.com/vi/4ANCYahKC5c/0.jpg)](https://www.youtube.com/watch?v=Q4ANCYahKC5c)
 
-##### Yellow lines
+##### Yellow line present
 [![Yellow line](https://img.youtube.com/vi/Q9WYJ_0Ic28/0.jpg)](https://www.youtube.com/watch?v=Q9WYJ_0Ic28)
 
 ### 2. Identify any shortcomings
